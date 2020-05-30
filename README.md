@@ -1,5 +1,7 @@
 # Tradium-web
-
+https://tradium.netlify.app
+<br />
+<br />
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bdb7dce8-c836-4f08-a05f-72c2fd9d1be7/deploy-status)](https://app.netlify.com/sites/tradium/deploys)
 
 ### Built using [Redwoodjs.com](https://redwoodjs.com)
