@@ -1,29 +1,17 @@
-# Redwood
->**HEADS UP:** RedwoodJS is _NOT_ ready for use in Production. It relies heavily on Prisma2, which is currently in testing with an expected production release coming soon. See status at ["Is Prisma2 Ready?"](https://isprisma2ready.com)
+# Tradium-web
 
-## Getting Started
-- [Redwoodjs.com](https://redwoodjs.com): home to all things RedwoodJS.
-- [Tutorial](https://redwoodjs.com/tutorial/welcome-to-redwood): getting started and complete overview guide.
-- [Docs](https://redwoodjs.com/docs/introduction): using the Redwood Router, handling assets and files, list of command-line tools, and more.
-- [Redwood Community](https://community.redwoodjs.com): get help, share tips and tricks, and collaborate on everything about RedwoodJS.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bdb7dce8-c836-4f08-a05f-72c2fd9d1be7/deploy-status)](https://app.netlify.com/sites/tradium/deploys)
 
-### Setup
+### Built using [Redwoodjs.com](https://redwoodjs.com)
 
-We use Yarn as our package manager. To get the dependencies installed, just do this in the root directory:
 
-```terminal
-yarn install
-```
+### Setup & Start
 
-### Fire it up
-
-```terminal
-yarn redwood dev
-```
+- `yarn install` in root directory
+- `rw dev` to start the dev mode
 
 Your browser should open automatically to `http://localhost:8910` to see the web app. Lambda functions run on `http://localhost:8911` and are also proxied to `http://localhost:8910/api/functions/*`.
 
-## Development
 
 ### Database
 
