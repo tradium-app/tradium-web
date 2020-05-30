@@ -5540,6 +5540,11 @@ extsprintf@^1.2.0:
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
 
+fancy-canvas@0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/fancy-canvas/-/fancy-canvas-0.2.1.tgz#aa8e814cf352305492b5ec31e200182f5b7a0316"
+  integrity sha512-DuN+pTHJUAdgqY+k7zABWwjr3OAC6LasHUZ3UzKLUdGuctGjR5q0jbMqobTWZ7P0R18EtXEHRUXc7zOwpywreQ==
+
 fast-deep-equal@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.1.tgz#545145077c501491e33b15ec408c294376e94ae4"
@@ -7778,6 +7783,13 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+lightweight-charts@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/lightweight-charts/-/lightweight-charts-2.0.0.tgz#b78f2be60f4ed9c58bb213e1bec3c0d0111761b8"
+  integrity sha512-BsyqgtwmiFrwXMTQIGBIVl3vxvWj1GoPWaZ6G8MDSqBChWWP7gNZSLnYt7dzWzBAQVRI/vl0mWeknBeas3DG/w==
+  dependencies:
+    fancy-canvas "0.2.1"
+
 limiter@^1.1.4:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/limiter/-/limiter-1.1.5.tgz#8f92a25b3b16c6131293a0cc834b4a838a2aa7c2"
@@ -8399,7 +8411,7 @@ mkdirp@^1.0.3, mkdirp@^1.0.4:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
 
-moment@^2.10.2:
+moment@^2.10.2, moment@^2.26.0:
   version "2.26.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.26.0.tgz#5e1f82c6bafca6e83e808b30c8705eed0dcbd39a"
   integrity sha512-oIixUO+OamkUkwjhAVE18rAMfRJNsNe/Stid/gwHSOfHrOtw9EhAY2AHvdKZ/k/MggcYELFCJz/Sn2pL8b8JMw==
