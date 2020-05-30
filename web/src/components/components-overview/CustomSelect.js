@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react'
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupText,
-  FormSelect
-} from "shards-react";
+  FormSelect,
+} from 'shards-react'
 
 const CustomSelect = () => (
   <div>
@@ -28,6 +28,6 @@ const CustomSelect = () => (
       </InputGroupAddon>
     </InputGroup>
   </div>
-);
+)
 
-export default CustomSelect;
+export default CustomSelect

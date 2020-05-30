@@ -1,5 +1,5 @@
-import React from "react";
-import { Row, Col, Button } from "shards-react";
+import React from 'react'
+import { Row, Col, Button } from 'shards-react'
 
 const SmallOutlineButtons = () => (
   <Row>
@@ -30,6 +30,6 @@ const SmallOutlineButtons = () => (
       </Button>
     </Col>
   </Row>
-);
+)
 
-export default SmallOutlineButtons;
+export default SmallOutlineButtons

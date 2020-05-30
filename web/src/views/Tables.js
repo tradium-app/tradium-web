@@ -1,13 +1,18 @@
-import React from "react";
-import { Container, Row, Col, Card, CardHeader, CardBody } from "shards-react";
+import React from 'react'
+import { Container, Row, Col, Card, CardHeader, CardBody } from 'shards-react'
 
-import PageTitle from "../components/common/PageTitle";
+import PageTitle from '../components/common/PageTitle'
 
 const Tables = () => (
   <Container fluid className="main-content-container px-4">
     {/* Page Header */}
     <Row noGutters className="page-header py-4">
-      <PageTitle sm="4" title="Add New Post" subtitle="Blog Posts" className="text-sm-left" />
+      <PageTitle
+        sm="4"
+        title="Add New Post"
+        subtitle="Blog Posts"
+        className="text-sm-left"
+      />
     </Row>
 
     {/* Default Light Table */}
@@ -152,6 +157,6 @@ const Tables = () => (
       </Col>
     </Row>
   </Container>
-);
+)
 
-export default Tables;
+export default Tables

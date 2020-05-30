@@ -1,29 +1,29 @@
-import React from "react";
+import React from 'react'
 import {
   InputGroup,
   FormInput,
   Dropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
-} from "shards-react";
+  DropdownItem,
+} from 'shards-react'
 
 class DropdownInputGroups extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.toggle = this.toggle.bind(this);
+    this.toggle = this.toggle.bind(this)
 
     this.state = {
       dropdown1: false,
-      dropdown2: false
-    };
+      dropdown2: false,
+    }
   }
 
   toggle(which) {
-    const newState = { ...this.state };
-    newState[which] = !this.state[which];
-    this.setState(newState);
+    const newState = { ...this.state }
+    newState[which] = !this.state[which]
+    this.setState(newState)
   }
 
   render() {
@@ -33,7 +33,7 @@ class DropdownInputGroups extends React.Component {
           <FormInput />
           <Dropdown
             open={this.state.dropdown1}
-            toggle={() => this.toggle("dropdown1")}
+            toggle={() => this.toggle('dropdown1')}
             addonType="append"
           >
             <DropdownToggle caret>Dropdown</DropdownToggle>
@@ -48,7 +48,7 @@ class DropdownInputGroups extends React.Component {
         <InputGroup className="mb-3">
           <Dropdown
             open={this.state.dropdown2}
-            toggle={() => this.toggle("dropdown2")}
+            toggle={() => this.toggle('dropdown2')}
             addonType="prepend"
           >
             <DropdownToggle caret>Dropdown</DropdownToggle>
@@ -61,8 +61,8 @@ class DropdownInputGroups extends React.Component {
           <FormInput />
         </InputGroup>
       </div>
-    );
+    )
   }
 }
 
-export default DropdownInputGroups;
+export default DropdownInputGroups

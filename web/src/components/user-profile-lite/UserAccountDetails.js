@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react'
+import PropTypes from 'prop-types'
 import {
   Card,
   CardHeader,
@@ -12,8 +12,8 @@ import {
   FormInput,
   FormSelect,
   FormTextarea,
-  Button
-} from "shards-react";
+  Button,
+} from 'shards-react'
 
 const UserAccountDetails = ({ title }) => (
   <Card small className="mb-4">
@@ -124,17 +124,17 @@ const UserAccountDetails = ({ title }) => (
       </ListGroupItem>
     </ListGroup>
   </Card>
-);
+)
 
 UserAccountDetails.propTypes = {
   /**
    * The component's title.
    */
-  title: PropTypes.string
-};
+  title: PropTypes.string,
+}
 
 UserAccountDetails.defaultProps = {
-  title: "Account Details"
-};
+  title: 'Account Details',
+}
 
-export default UserAccountDetails;
+export default UserAccountDetails

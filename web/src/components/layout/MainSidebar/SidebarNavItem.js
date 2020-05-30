@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { NavLink as RouteNavLink } from "react-router-dom";
-import { NavItem, NavLink } from "shards-react";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { NavLink as RouteNavLink } from 'react-router-dom'
+import { NavItem, NavLink } from 'shards-react'
 
 const SidebarNavItem = ({ item }) => (
   <NavItem>
@@ -21,13 +21,13 @@ const SidebarNavItem = ({ item }) => (
       )}
     </NavLink>
   </NavItem>
-);
+)
 
 SidebarNavItem.propTypes = {
   /**
    * The item object.
    */
-  item: PropTypes.object
-};
+  item: PropTypes.object,
+}
 
-export default SidebarNavItem;
+export default SidebarNavItem

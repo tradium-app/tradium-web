@@ -1,5 +1,5 @@
-import React from "react";
-import { Row, Col, Button } from "shards-react";
+import React from 'react'
+import { Row, Col, Button } from 'shards-react'
 
 const NormalButtons = () => (
   <Row>
@@ -30,6 +30,6 @@ const NormalButtons = () => (
       </Button>
     </Col>
   </Row>
-);
+)
 
-export default NormalButtons;
+export default NormalButtons

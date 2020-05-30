@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const CustomFileUpload = () => (
   <div className="custom-file mb-3">
@@ -7,6 +7,6 @@ const CustomFileUpload = () => (
       Choose file...
     </label>
   </div>
-);
+)
 
-export default CustomFileUpload;
+export default CustomFileUpload
