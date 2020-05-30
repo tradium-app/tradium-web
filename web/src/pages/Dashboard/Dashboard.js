@@ -6,7 +6,7 @@ export default (props) => (
   <main>
     <section>
       <div>
-        <DefaultLayout {...props}>
+        <DefaultLayout {...props} noNavbar={true} noFooter={true}>
           <StockOverview {...props} />
         </DefaultLayout>
       </div>
