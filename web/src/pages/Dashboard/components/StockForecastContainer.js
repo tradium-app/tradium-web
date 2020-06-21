@@ -1,6 +1,6 @@
 import React from 'react'
 
-import StockForecastView from './StockForecastView'
+import StockChartCell from './StockChartCell'
 
 // const STOCK_CHART_QUERY = gql`
 // 	query getModels($symbols: [String]!) {
