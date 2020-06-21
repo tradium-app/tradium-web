@@ -24,7 +24,6 @@ export const Failure = ({ error }) => (
 
 const displayChart = (chartRef, dataFrames) => {
   dataFrames = dataFrames.map((row) => {
-    console.log('printing row', row)
     return {
       time: moment(row.datetime).format('YYYY-MM-DD'),
       value: row.tweets_count,
