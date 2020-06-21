@@ -19,14 +19,12 @@ Your browser should open automatically to `http://localhost:8910` to see the web
 
 We're using [Prisma2](https://github.com/prisma/prisma2), a modern DB toolkit to query, migrate and model your database.
 
-Prisma2 is [not ready for production](https://isprisma2ready.com) at the moment.
-
 To create a development database:
 
 ```terminal
-yarn redwood db up
+rw db up
 ```
 
-This will read the schema definition in `api/prisma/schema.prisma` and generate a sqlite database in `api/prisma/dev.db`
+This will create postgres tables from schema at `api/prisma/schema.
 
-If you've made changes to the schema run `yarn redwood db save` to generate a migration, and `yarn redwood db up` to apply the migration/ generate a new ORM client.
+If you've made changes to the schema run `rw db save` to generate a migration, and `rw db up` to apply the migration/ generate a new ORM client.
