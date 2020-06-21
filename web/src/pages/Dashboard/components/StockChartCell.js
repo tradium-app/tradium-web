@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import moment from 'moment'
 import { Card, CardHeader, CardBody, FormSelect, Col } from 'shards-react'
 import { createChart } from 'lightweight-charts'
@@ -24,21 +23,13 @@ export const Failure = ({ error }) => (
 )
 
 const displayChart = (chartRef, dataFrames) => {
-  // const stock_history_model = JSON.parse(this.props.model[0].stock_history)
-  // const stock_history_series = this.stock_model_to_series(
-  //   stock_history_model,
-  //   'Adj. Close'
-  // )
-  // const stock_forecast_model = JSON.parse(this.props.model[0].stock_forecast)
-  // const stock_forecast_series = this.stock_model_to_series(
-  //   stock_forecast_model,
-  //   'yhat'
-  // )
-
-  // console.log(
-  //   'printing chartRef.current.getContext',
-  //   chartRef.current.getContext('2d')
-  // )
+  dataFrames = dataFrames.map((row) => {
+    console.log('printing row', row)
+    return {
+      time: moment(row.datetime).format('YYYY-MM-DD'),
+      value: row.tweets_count,
+    }
+  })
 
   const chartOptions = {
     width: chartRef.offsetWidth,
@@ -60,20 +51,15 @@ const displayChart = (chartRef, dataFrames) => {
   lineSeries.applyOptions({
     lineWidth: 2,
   })
-
-  // const forecastSeries = chart.addLineSeries()
-  // forecastSeries.setData(stock_forecast_series)
-  // forecastSeries.applyOptions({
-  //   color: 'rgb(51, 204, 51)',
-  //   lineWidth: 2,
-  // })
 }
 
 export const Success = ({ dataFrames }) => {
   const chartRef = useRef()
 
   useEffect(() => {
-    displayChart(chartRef, [{ time: '2001-1-1', value: '11' }])
+    if (chartRef.current != null) {
+      displayChart(chartRef.current, dataFrames)
+    }
   })
 
   return (
@@ -93,7 +79,6 @@ export const Success = ({ dataFrames }) => {
           height="300"
           style={{ maxWidth: '100% !important' }}
         />
-        {JSON.stringify(dataFrames)}
       </CardBody>
     </Card>
   )
