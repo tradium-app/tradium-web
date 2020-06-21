@@ -1,3 +1,4 @@
 # Prisma Migrate lockfile v1
 
 20200621160117-first_migration
+20200621163841-add-id

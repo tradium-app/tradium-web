@@ -10,7 +10,7 @@
     "@redwoodjs/web": "^0.11.0",
     "chart.js": "^2.9.3",
     "classnames": "^2.2.6",
-    "lightweight-charts": "^3.0.1",
+    "lightweight-charts": "^2.0.0",
     "moment": "^2.27.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
