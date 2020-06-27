@@ -25,48 +25,98 @@
     },
     {
       "tag": "CreateModel",
-      "model": "DataFrame"
+      "model": "stock_data"
     },
     {
       "tag": "CreateField",
-      "model": "DataFrame",
+      "model": "stock_data",
+      "field": "id",
+      "type": "Int",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "stock_data",
+          "field": "id"
+        },
+        "directive": "id"
+      }
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "stock_data",
+          "field": "id"
+        },
+        "directive": "default"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "stock_data",
+          "field": "id"
+        },
+        "directive": "default"
+      },
+      "argument": "",
+      "value": "autoincrement()"
+    },
+    {
+      "tag": "CreateField",
+      "model": "stock_data",
       "field": "stock",
       "type": "String",
       "arity": "Required"
     },
     {
       "tag": "CreateField",
-      "model": "DataFrame",
+      "model": "stock_data",
       "field": "company",
       "type": "String",
       "arity": "Required"
     },
     {
       "tag": "CreateField",
-      "model": "DataFrame",
+      "model": "stock_data",
       "field": "datetime",
       "type": "DateTime",
       "arity": "Required"
     },
     {
       "tag": "CreateField",
-      "model": "DataFrame",
+      "model": "stock_data",
+      "field": "news_count",
+      "type": "Int",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "stock_data",
       "field": "tweets_count",
       "type": "Int",
       "arity": "Required"
     },
     {
       "tag": "CreateField",
-      "model": "DataFrame",
-      "field": "tweets_positive_sentiment",
-      "type": "Float",
+      "model": "stock_data",
+      "field": "positive_tweets_count",
+      "type": "Int",
       "arity": "Required"
     },
     {
       "tag": "CreateField",
-      "model": "DataFrame",
-      "field": "tweets_negative_sentiment",
-      "type": "Float",
+      "model": "stock_data",
+      "field": "negative_tweets_count",
+      "type": "Int",
       "arity": "Required"
     },
     {
@@ -74,7 +124,7 @@
       "location": {
         "path": {
           "tag": "Model",
-          "model": "DataFrame",
+          "model": "stock_data",
           "arguments": [
             {
               "name": "",
