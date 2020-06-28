@@ -1,0 +1,35 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "UpdateField",
+      "model": "stock_data",
+      "field": "company",
+      "arity": "Optional"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "stock_data",
+      "field": "news_count",
+      "arity": "Optional"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "stock_data",
+      "field": "tweets_count",
+      "arity": "Optional"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "stock_data",
+      "field": "positive_tweets_count",
+      "arity": "Optional"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "stock_data",
+      "field": "negative_tweets_count",
+      "arity": "Optional"
+    }
+  ]
+}

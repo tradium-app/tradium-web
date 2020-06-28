@@ -16,7 +16,7 @@ export const QUERY = gql`
 
 export const Loading = () => <div>Loading...</div>
 
-export const Empty = () => <div>No posts yet!</div>
+export const Empty = () => <div>No data yet!</div>
 
 export const Failure = ({ error }) => (
   <div>Error loading stock data: {error.message}</div>
