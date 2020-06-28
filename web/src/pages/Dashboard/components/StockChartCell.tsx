@@ -72,11 +72,11 @@ export const Success = ({ stock_data }) => {
     <Card small className="h-100">
       <CardHeader className="border-bottom">
         <Col md="4" className="form-group">
-          <FormSelect id="feInputState">
+          {/* <FormSelect id="feInputState">
             <option>Select Stock...</option>
             <option>TSLA</option>
             <option>NFLX</option>
-          </FormSelect>
+          </FormSelect> */}
         </Col>
       </CardHeader>
       <CardBody className="pt-0">
