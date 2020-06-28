@@ -5,7 +5,7 @@ import { createChart } from 'lightweight-charts'
 
 export const QUERY = gql`
   query {
-    dataFrames {
+    stock_data {
       stock
       company
       datetime
@@ -22,8 +22,8 @@ export const Failure = ({ error }) => (
   <div>Error loading stock data: {error.message}</div>
 )
 
-const displayChart = (chartRef, dataFrames) => {
-  dataFrames = dataFrames.map((row) => {
+const displayChart = (chartRef, stock_data) => {
+  stock_data = stock_data.map((row) => {
     return {
       time: moment(row.datetime).format('YYYY-MM-DD'),
       value: row.tweets_count,
@@ -46,18 +46,18 @@ const displayChart = (chartRef, dataFrames) => {
   const chart = createChart(chartRef, chartOptions)
 
   const lineSeries = chart.addLineSeries()
-  lineSeries.setData(dataFrames)
+  lineSeries.setData(stock_data)
   lineSeries.applyOptions({
     lineWidth: 2,
   })
 }
 
-export const Success = ({ dataFrames }) => {
+export const Success = ({ stock_data }) => {
   const chartRef = useRef()
 
   useEffect(() => {
     if (chartRef.current != null) {
-      displayChart(chartRef.current, dataFrames)
+      displayChart(chartRef.current, stock_data)
     }
   })
 
