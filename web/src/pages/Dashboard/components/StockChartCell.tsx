@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import moment from 'moment'
 import { Card, CardHeader, CardBody, FormSelect, Col } from 'shards-react'
-import { createChart } from 'lightweight-charts'
+import { createChart, UTCTimestamp } from 'lightweight-charts'
 
 export const QUERY = gql`
   query {
@@ -23,14 +23,21 @@ export const Failure = ({ error }) => (
 )
 
 const displayChart = (chartRef, stock_data) => {
-  stock_data = stock_data.map((row) => {
+  const stock_data_formatted = stock_data.map((row) => {
+    const timestamp = (moment.utc(row.datetime).valueOf() /
+      1000) as UTCTimestamp
+
     return {
-      time: moment(row.datetime).format('YYYY-MM-DD'),
+      time: timestamp,
       value: row.tweets_count,
     }
   })
 
   const chartOptions = {
+    timeScale: {
+      visible: true,
+      timeVisible: true,
+    },
     width: chartRef.offsetWidth,
     height: 300,
     grid: {
@@ -46,7 +53,7 @@ const displayChart = (chartRef, stock_data) => {
   const chart = createChart(chartRef, chartOptions)
 
   const lineSeries = chart.addLineSeries()
-  lineSeries.setData(stock_data)
+  lineSeries.setData(stock_data_formatted)
   lineSeries.applyOptions({
     lineWidth: 2,
   })

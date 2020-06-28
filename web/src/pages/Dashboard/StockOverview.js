@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'shards-react'
 
 // import StockForecast from './components/StockForecastContainer'
-import StockChartCell from './components/StockChartCell'
+import StockChartCell from './components/StockChartCell.tsx'
 
 const StockOverview = () => {
   const symbol = 'TSLA'
