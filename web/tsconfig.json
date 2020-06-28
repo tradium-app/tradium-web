@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "target": "es6",
+    "allowJs": true,
+    "checkJs": true,
+    "jsx": "react",
+    "removeComments": true,
+    "noEmit": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "paths": {
+      "src/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { DefaultLayout } from '../../layouts'
 
 import StockOverview from './StockOverview'
