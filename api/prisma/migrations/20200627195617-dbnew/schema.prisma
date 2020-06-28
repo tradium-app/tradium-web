@@ -19,5 +19,5 @@ model stock_data {
   tweets_count          Int
   positive_tweets_count Int
   negative_tweets_count Int
-  @@unique([stock, datetime])
+  // @@unique([stock, datetime])
 }

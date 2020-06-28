@@ -118,22 +118,6 @@
       "field": "negative_tweets_count",
       "type": "Int",
       "arity": "Required"
-    },
-    {
-      "tag": "CreateDirective",
-      "location": {
-        "path": {
-          "tag": "Model",
-          "model": "stock_data",
-          "arguments": [
-            {
-              "name": "",
-              "value": "[stock, datetime]"
-            }
-          ]
-        },
-        "directive": "unique"
-      }
     }
   ]
 }

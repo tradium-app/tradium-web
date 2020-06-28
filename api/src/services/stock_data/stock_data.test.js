@@ -1,8 +1,8 @@
-import { stock_data } from './stock_data'
+import { stockData } from './stock_data'
 
 describe('stock data', () => {
   it('returns stock data', () => {
-    stock_data()
+    stockData()
     expect(true).toBe(true)
   })
 })
