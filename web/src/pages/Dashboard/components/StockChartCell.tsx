@@ -10,6 +10,7 @@ export const QUERY = gql`
       company
       datetime
       tweets_count
+      negative_tweets_count
     }
   }
 `
@@ -23,13 +24,23 @@ export const Failure = ({ error }) => (
 )
 
 const displayChart = (chartRef, stock_data) => {
-  const stock_data_formatted = stock_data.map((row) => {
+  const tweets_count_data = stock_data.map((row) => {
     const timestamp = (moment.utc(row.datetime).valueOf() /
       1000) as UTCTimestamp
 
     return {
       time: timestamp,
       value: row.tweets_count,
+    }
+  })
+
+  const negative_tweets_count_data = stock_data.map((row) => {
+    const timestamp = (moment.utc(row.datetime).valueOf() /
+      1000) as UTCTimestamp
+
+    return {
+      time: timestamp,
+      value: row.negative_tweets_count,
     }
   })
 
@@ -52,11 +63,18 @@ const displayChart = (chartRef, stock_data) => {
 
   const chart = createChart(chartRef, chartOptions)
 
-  const lineSeries = chart.addLineSeries()
-  lineSeries.setData(stock_data_formatted)
-  lineSeries.applyOptions({
-    lineWidth: 2,
-  })
+  chart
+    .addLineSeries({
+      lineWidth: 2,
+    })
+    .setData(tweets_count_data)
+
+  chart
+    .addLineSeries({
+      lineWidth: 1,
+      color: '#bd2c0b',
+    })
+    .setData(negative_tweets_count_data)
 }
 
 export const Success = ({ stock_data }) => {
