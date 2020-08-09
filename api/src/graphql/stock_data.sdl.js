@@ -15,6 +15,7 @@ export const schema = gql`
     tweets_count: Int
     positive_tweets_count: Int
     negative_tweets_count: Int
+    error: Float
     predicted_close_price: Float
   }
 
