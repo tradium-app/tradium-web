@@ -6,10 +6,16 @@ export const schema = gql`
     stock: String!
     company: String
     datetime: DateTime!
+    open_price: Float
+    high_price: Float
+    low_price: Float
+    close_price: Float
+    volume: Int
     news_count: Int
     tweets_count: Int
     positive_tweets_count: Int
     negative_tweets_count: Int
+    predicted_close_price: Float
   }
 
   type Query {

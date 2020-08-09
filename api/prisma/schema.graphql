@@ -13,11 +13,17 @@ generator client {
 model stock_data {
   id                    Int      @id @default(autoincrement())
   stock                 String
-  company               String?
+  company               String
   datetime              DateTime
+  open_price            Float
+  high_price            Float
+  low_price             Float
+  close_price           Float
+  volume                Int
   news_count            Int?
   tweets_count          Int?
   positive_tweets_count Int?
   negative_tweets_count Int?
-  // @@unique([stock, datetime])
+  predicted_close_price Float?
+  @@unique([stock, datetime])
 }
