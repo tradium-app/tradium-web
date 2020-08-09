@@ -1,0 +1,69 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateField",
+      "model": "stock_data",
+      "field": "open_price",
+      "type": "Float",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateField",
+      "model": "stock_data",
+      "field": "high_price",
+      "type": "Float",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateField",
+      "model": "stock_data",
+      "field": "low_price",
+      "type": "Float",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateField",
+      "model": "stock_data",
+      "field": "close_price",
+      "type": "Float",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateField",
+      "model": "stock_data",
+      "field": "volume",
+      "type": "Int",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateField",
+      "model": "stock_data",
+      "field": "predicted_close_price",
+      "type": "Float",
+      "arity": "Optional"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "stock_data",
+      "field": "company",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Model",
+          "model": "stock_data",
+          "arguments": [
+            {
+              "name": "",
+              "value": "[stock, datetime]"
+            }
+          ]
+        },
+        "directive": "unique"
+      }
+    }
+  ]
+}
