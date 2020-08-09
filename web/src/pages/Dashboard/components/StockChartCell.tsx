@@ -24,25 +24,29 @@ export const Failure = ({ error }) => (
 )
 
 const displayChart = (chartRef, stock_data) => {
-  const close_price_data = stock_data.map((row) => {
-    const timestamp = (moment.utc(row.datetime).valueOf() /
-      1000) as UTCTimestamp
+  const close_price_data = stock_data
+    .filter((row) => row.close_price > 0)
+    .map((row) => {
+      const timestamp = (moment.utc(row.datetime).valueOf() /
+        1000) as UTCTimestamp
 
-    return {
-      time: timestamp,
-      value: row.close_price,
-    }
-  })
+      return {
+        time: timestamp,
+        value: row.close_price,
+      }
+    })
 
-  const predicted_close_price_data = stock_data.map((row) => {
-    const timestamp = (moment.utc(row.datetime).valueOf() /
-      1000) as UTCTimestamp
+  const predicted_close_price_data = stock_data
+    .filter((row) => row.predicted_close_price > 0)
+    .map((row) => {
+      const timestamp = (moment.utc(row.datetime).valueOf() /
+        1000) as UTCTimestamp
 
-    return {
-      time: timestamp,
-      value: row.predicted_close_price,
-    }
-  })
+      return {
+        time: timestamp,
+        value: row.predicted_close_price,
+      }
+    })
 
   const chartOptions = {
     timeScale: {
