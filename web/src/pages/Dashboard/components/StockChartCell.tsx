@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import moment from 'moment'
-import { Card, CardHeader, CardBody, FormSelect, Col } from 'shards-react'
+import { Card, CardHeader, CardBody, Col } from 'shards-react'
 import { createChart, UTCTimestamp } from 'lightweight-charts'
 
 export const QUERY = gql`
@@ -9,8 +9,8 @@ export const QUERY = gql`
       stock
       company
       datetime
-      tweets_count
-      negative_tweets_count
+      close_price
+      predicted_close_price
     }
   }
 `
@@ -24,23 +24,23 @@ export const Failure = ({ error }) => (
 )
 
 const displayChart = (chartRef, stock_data) => {
-  const tweets_count_data = stock_data.map((row) => {
+  const close_price_data = stock_data.map((row) => {
     const timestamp = (moment.utc(row.datetime).valueOf() /
       1000) as UTCTimestamp
 
     return {
       time: timestamp,
-      value: row.tweets_count,
+      value: row.close_price,
     }
   })
 
-  const negative_tweets_count_data = stock_data.map((row) => {
+  const predicted_close_price_data = stock_data.map((row) => {
     const timestamp = (moment.utc(row.datetime).valueOf() /
       1000) as UTCTimestamp
 
     return {
       time: timestamp,
-      value: row.negative_tweets_count,
+      value: row.predicted_close_price,
     }
   })
 
@@ -67,14 +67,14 @@ const displayChart = (chartRef, stock_data) => {
     .addLineSeries({
       lineWidth: 2,
     })
-    .setData(tweets_count_data)
+    .setData(close_price_data)
 
   chart
     .addLineSeries({
       lineWidth: 1,
       color: '#bd2c0b',
     })
-    .setData(negative_tweets_count_data)
+    .setData(predicted_close_price_data)
 }
 
 export const Success = ({ stock_data }) => {
