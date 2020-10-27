@@ -27,7 +27,7 @@ const displayChart = (chartRef, stock_data) => {
   const close_price_data = stock_data
     .filter((row) => row.close_price > 0)
     .map((row) => {
-      const timestamp = (moment.utc(row.datetime).valueOf() /
+      const timestamp = ((moment.utc(row.datetime).valueOf() - 14400000) /
         1000) as UTCTimestamp
 
       return {
@@ -39,7 +39,7 @@ const displayChart = (chartRef, stock_data) => {
   const predicted_close_price_data = stock_data
     .filter((row) => row.predicted_close_price > 0)
     .map((row) => {
-      const timestamp = (moment.utc(row.datetime).valueOf() /
+      const timestamp = ((moment.utc(row.datetime).valueOf() - 14400000) /
         1000) as UTCTimestamp
 
       return {
