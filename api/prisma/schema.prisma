@@ -5,7 +5,7 @@ datasource DS {
 
 generator client {
   provider      = "prisma-client-js"
-  binaryTargets = env("BINARY_TARGET")
+  binaryTargets = ["native", "rhel-openssl-1.0.x"]
 }
 
 // Run `rw db save` to create models in db
@@ -26,5 +26,6 @@ model stock_data {
   negative_tweets_count Int?
   error                 Float?
   predicted_close_price Float?
+
   @@unique([stock, datetime])
 }
